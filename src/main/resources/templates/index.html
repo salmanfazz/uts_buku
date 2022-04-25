@@ -1,0 +1,144 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <title> Data Buku | Home </title>
+</head>
+<style>
+body
+{
+    padding: 0;
+    margin: 0;
+    background-image: url("img/vicmensa.jpg");
+  background-color: #515151;
+}
+header
+{
+	margin: 40px 0px 0px 60px;
+	position: fixed;
+}
+#container
+{
+    margin: 150px 0px 0px 240px;
+    text-align: left;
+	position: fixed;
+    color: white;
+    font-size: 18pt;
+    font-family: monospace;
+}
+.title-block
+{
+    margin: 20px 0px 0px 30px;
+    text-align: left;
+	color: #00b4ff;
+    font-family: monospace;
+	font-size: 24pt;
+}
+.nav
+{
+	display:none;
+	text-align: left;
+	font-size: 14pt;
+}
+.nav a:hover
+{
+    color: white;
+    text-decoration: none;
+}
+.nav ul
+{
+    display: none;
+	background: none;
+}
+.nav li:hover ul
+{
+    display: block;
+}
+a
+{
+    text-decoration: none;
+    color: #00b4ff;
+}
+li
+{
+    list-style: none;
+}
+.burger-button
+{
+
+	background: none;
+	position: absolute;
+    border: 0;
+    color: white;
+	outline: none;
+    font-size: 20pt;
+	font-family: monospace;
+}
+.x-button
+{
+    background: none;
+    position: absolute;
+    border: 0;
+    color: white;
+    outline: none;
+    font-size: 20pt;
+    font-family: monospace;
+}
+
+</style>
+<body>
+<header>
+  <button class="burger-button" onclick="
+				if (document.getElementById('menu').style.display=='block')
+				{
+					document.getElementById('menu').style.display = 'none'
+				}
+				else
+				{
+					document.getElementById('menu').style.display = 'block'
+                    /*make the hamburger icon an X and get it to stop moving positions*/
+                }
+		"><a href = "#"><span style = "color: white;">&#9776;</span></a>
+
+    <!-- nav -->
+    <ul class = "nav" id="menu">
+      <li> <a href = "/"> Home </a> </li>
+      <li> <a href = "/forgot-password"> Forget Password </a> </li>
+      <li> <a href = "/logout"> Logout </a> </li>
+    </ul>
+    <!-- end nav -->
+</header>
+
+<div id = "container">
+  <div><h2>Data Buku</h2></div>
+  <div><a class="btn btn-info" role="button" th:href="@{/create}">New</a></div>
+  <div>
+    <table class="table">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">Kode Buku</th>
+        <th scope="col">Nama Buku</th>
+        <th scope="col">Nama Penerbit</th>
+        <th scope="col">Tahun Terbit</th>
+        <th scope="col">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="b : ${buku}">
+        <td scope="col" th:text="${b.id}"></td>
+        <td scope="col" th:text="${b.kode_buku}"></td>
+        <td scope="col" th:text="${b.judul}"></td>
+        <td scope="col" th:text="${b.nama_penerbit}"></td>
+        <td scope="col" th:text="${b.tahun_terbit}"></td>
+        <td scope="col">
+          <a class="btn btn-primary" role="button" th:href="${'/edit/'+b.id}"><span>Edit</span></a>
+          <a class="btn btn-danger" role="button" th:href="${'/hapus/'+b.id}"><span>Remove</span></a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>

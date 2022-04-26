@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: postgres://rexeywuleripiu:3b7cde6338ad1439b20f0b621f4dbd179cc0c3615fb450197e5466fbefaa8912@ec2-3-209-124-113.compute-1.amazonaws.com:5432/d8r4s43kt2cdre
-    username: rexeywuleripiu
-    password: 3b7cde6338ad1439b20f0b621f4dbd179cc0c3615fb450197e5466fbefaa8912
+    url:
+    username:
+    password:
   jpa:
     hibernate:
       ddl-auto: update
@@ -16,7 +16,7 @@ spring:
     default-encoding: UTF-8
     host: smtp.gmail.com
     username: salman.fazzz@gmail.com
-    password: 4Maret2002
+    password: 4March2002
     port: 587
     properties:
       mail:

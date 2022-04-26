@@ -28,48 +28,24 @@
                 <input th:field="*{id}" type="hidden"/>
 
                 <div class="form-group">
-                    <label class="col-sm-4 control-label">Nama Depan:</label>
-                    <div class="col-sm-8">
-                        <input class="form-control" th:field="*{firstName}" type="text" id="firstName" placeholder="Nama Depan" required>
-                    </div>
+                    <label for="kode_buku">Kode Buku:</label>
+                    <input class="form-control" id="kode_buku" th:field="*{kode_buku}" type="text">
+<!--                    <p class="alert alert-danger" th:errors="*{kode_buku}" th:if="${#fields.hasErrors('kode_buku')}">-->
                 </div>
-
                 <div class="form-group">
-                    <label class="col-sm-4 control-label">Nama Belakang:</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" th:field="*{lastName}" type="text" id="lastName"
-                               placeholder="Nama Belakang" required>
-                    </div>
+                    <label for="judul">Judul Buku:</label>
+                    <input class="form-control" id="judul" th:field="*{judul}" type="text">
+<!--                    <p class="alert alert-danger" th:errors="*{judul}" th:if="${#fields.hasErrors('judul')}">-->
                 </div>
-
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">Tanggal Lahir:</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" id="birthDate" required th:field="*{birthDate}" type="date">
-                    </div>
+                    <label for="nama_penerbit">Nama Penerbit:</label>
+                    <input class="form-control" id="nama_penerbit" th:field="*{nama_penerbit}" type="text">
+<!--                    <p class="alert alert-danger" th:errors="*{nama_penerbit}" th:if="${#fields.hasErrors('nama_penerbit')}">-->
                 </div>
-
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">Email:</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" id="email" placeholder="Email" required th:field="*{email}"
-                               type="text">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Phone:</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" th:field="*{phone}" type="text" id="phone"
-                               placeholder="Nomor telepon" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Jurusan:</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" th:field="*{jurusan}" type="text" id="jurusan" placeholder="Nomor Jurusan" required>
-                    </div>
+                    <label for="tahun_penerbit">Tahun Terbit:</label>
+                    <input class="form-control" id="tahun_penerbit" th:field="*{tahun_penerbit}" type="text">
+<!--                    <p class="alert alert-danger" th:errors="*{tahun_terbit}" th:if="${#fields.hasErrors('tahun_terbit')}">-->
                 </div>
 
                 <div class="form-group">

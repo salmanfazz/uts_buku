@@ -1,8 +1,9 @@
-spring:
+server:
+  port: 8080
   datasource:
-    url:
-    username:
-    password:
+    url:  jdbc:postgresql://localhost:5432/password_reset?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Jakarta&useSSL=false
+    username: postgres
+    password: 4Maret2002
   jpa:
     hibernate:
       ddl-auto: update
@@ -16,7 +17,7 @@ spring:
     default-encoding: UTF-8
     host: smtp.gmail.com
     username: salman.fazzz@gmail.com
-    password: 4March2002
+    password: ovstskouoxkaiyvc
     port: 587
     properties:
       mail:
